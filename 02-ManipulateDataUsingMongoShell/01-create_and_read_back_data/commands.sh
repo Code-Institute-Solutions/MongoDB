@@ -1,5 +1,5 @@
 # Download and install MongoDB
-wget -q https://git.io/vFb1J - O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh
+wget -q https://git.io/vFb1J -O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh
 
 # Connect to the Mongo Database
 # NOTE: REPLACE THE `<dbuser>` & `<dbpassword>` WITH YOUR OWN PERSONAL
