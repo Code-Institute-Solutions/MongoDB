@@ -1,5 +1,5 @@
 # Download and install MongoDB client 4.0.6 for Atlas on AWS Cloud9
-wget -q https://git.io/fjuhw -O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh
+wget -q https://git.io/fjzf1 -O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh
 
 
 # Download and install MongoDB client 4.0.6 for Atlas on old Cloud9
