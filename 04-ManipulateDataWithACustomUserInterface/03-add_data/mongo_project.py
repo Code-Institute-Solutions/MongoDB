@@ -1,35 +1,20 @@
-import pymongo
 import os
+import pymongo
+if os.path.exists("env.py"):
+    import env
 
-MONGODB_URI = os.getenv("MONGO_URI")
-DBS_NAME = "myTestDB"
-COLLECTION_NAME = "myFirstMDB"
+
+MONGO_URI = os.environ.get("MONGO_URI")
+DATABASE = "myFirstDB"
+COLLECTION = "celebrities"
+
 
 def mongo_connect(url):
     try:
         conn = pymongo.MongoClient(url)
-        print("Mongo is connected!")
         return conn
     except pymongo.errors.ConnectionFailure as e:
         print("Could not connect to MongoDB: %s") % e
-
-
-def get_record():
-    print("")
-    first = input("Enter first name > ")
-    last = input("Enter last name > ")
-
-    try:
-        doc = coll.find_one({'first': first.lower(), 'last': last.lower()})
-    except:
-        print("Error accessing the database")
-    
-    if not doc:
-        print("")
-        print("Error! No results found.")
-    
-    return doc
-
 
 
 def show_menu():
@@ -44,20 +29,43 @@ def show_menu():
     return option
 
 
+def get_record():
+    print("")
+    first = input("Enter first name > ")
+    last = input("Enter last name > ")
+
+    try:
+        doc = coll.find_one({"first": first.lower(), "last": last.lower()})
+    except:
+        print("Error accessing the database")
+
+    if not doc:
+        print("")
+        print("Error! No results found.")
+
+    return doc
+
+
 def add_record():
     print("")
     first = input("Enter first name > ")
     last = input("Enter last name > ")
     dob = input("Enter date of birth > ")
     gender = input("Enter gender > ")
-    hair_colour = input("Enter hair colour > ")
+    hair_color = input("Enter hair color > ")
     occupation = input("Enter occupation > ")
     nationality = input("Enter nationality > ")
 
-    new_doc = {'first': first.lower(), 'last': last.lower(), 'dob': dob,
-               'gender': gender, 'hair_colour': hair_colour, 'occupation':
-               occupation, 'nationality': nationality}
-    
+    new_doc = {
+        "first": first.lower(),
+        "last": last.lower(),
+        "dob": dob,
+        "gender": gender,
+        "hair_color": hair_color,
+        "occupation": occupation,
+        "nationality": nationality
+    }
+
     try:
         coll.insert(new_doc)
         print("")
@@ -85,8 +93,6 @@ def main_loop():
         print("")
 
 
-conn = mongo_connect(MONGODB_URI)
-coll = conn[DBS_NAME][COLLECTION_NAME]
-
+conn = mongo_connect(MONGO_URI)
+coll = conn[DATABASE][COLLECTION]
 main_loop()
-
