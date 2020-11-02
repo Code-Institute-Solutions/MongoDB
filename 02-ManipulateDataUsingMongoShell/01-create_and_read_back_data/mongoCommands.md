@@ -39,7 +39,7 @@ coll.insert({
     last: "lennon",
     dob: "09/10/1940",
     gender: "m",
-    hair_colour: "brown",
+    hair_color: "brown",
     occupation: "beatle",
     nationality: "british"
 });
@@ -48,7 +48,7 @@ coll.insert({
     last: "ryan",
     dob: "19/09/1992",
     gender: "f",
-    hair_colour: "pink",
+    hair_color: "pink",
     occupation: "developer",
     nationality: "irish"
 });
@@ -57,7 +57,7 @@ coll.insert({
     last: "fenton",
     dob: "15/05/1974",
     gender: "f",
-    hair_colour: "brown",
+    hair_color: "brown",
     occupation: "manager",
     nationality: "irish"
 });
@@ -66,7 +66,7 @@ coll.insert({
     last: "hanslem",
     dob: "14/07/1983",
     gender: "m",
-    hair_colour: "blonde",
+    hair_color: "blonde",
     occupation: "actor",
     nationality: "british"
 });
@@ -75,7 +75,7 @@ coll.insert({
     last: "persolm",
     dob: "19/12/1994",
     gender: "f",
-    hair_colour: "black",
+    hair_color: "black",
     occupation: "activist",
     nationality: "american"
 });
