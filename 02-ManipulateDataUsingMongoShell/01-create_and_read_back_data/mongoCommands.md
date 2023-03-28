@@ -1,15 +1,5 @@
-# AWS Cloud9
-- **Download/Install MongoDB client 4.0.6 for Atlas**
-- `wget -q https://git.io/fjzf1 -O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh`
-
-
-# Old Cloud9
-- **Download/Install MongoDB client 4.0.6 for Atlas on old Cloud9**
-- `wget -q https://git.io/fh7vV -O /tmp/setupmongodb.sh && source /tmp/setupmongodb.sh`
-
-
-# Gitpod
-- **Connect to Mongo CLI on Gitpod**
+# IDE
+- **Connect to Mongo CLI on a IDE**
 - navigate to your MongoDB Clusters Sandbox
 - click **"Connect"** button
 - select **"Connect with the mongo shell"**
